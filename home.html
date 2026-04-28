@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>My.Bakery</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+
+    <!-- KIRI -->
+    <div class="nav-left">
+        <h1 class="logo">My.Bakery</h1>
+    </div>
+
+    <!-- TENGAH -->
+    <div class="nav-center">
+        <span class="active">Home</span>
+        <span>Product</span>
+        <span>About Us</span>
+    </div>
+
+    <!-- KANAN -->
+    <div class="nav-right">
+        <div class="search-box">
+            <input type="text" placeholder="Hinted search text">
+        </div>
+
+        <div class="cart" onclick="toggleCart()">🛒</div>
+    </div>
+
+</header>
+
+<div class="cart-popup" id="cartPopup">
+    <h3>🛒 Cart</h3>
+    <ul id="cart-list"></ul>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-text">
+        <h2>Fresh Bread Today!</h2>
+        <p>Enjoy Fresh Bread Now!</p>
+        <button class="btn">Order Now</button>
+        <button class="btn-outline">View More</button>
+    </div>
+</section>
+
+<!-- Category -->
+<section class="category">
+
+    <div class="category-card">
+        <img src="cromboloni.jpg">
+        <div>
+            <h3>Sweet</h3>
+            <p>Manis & lembut untuk harimu</p>
+        </div>
+    </div>
+
+    <div class="category-card">
+        <img src="Easy Garlic Bread with Sliced Bread.jpg">
+        <div>
+            <h3>Savory</h3>
+            <p>Gurih di setiap saat</p>
+        </div>
+    </div>
+
+    <div class="category-card">
+        <img src="White Bread.jpg">
+        <div>
+            <h3>Plain</h3>
+            <p>Rasa yang siap setiap gigitan</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- Best Seller -->
+<section class="best">
+    <h2>Best Seller:</h2>
+    
+    <div class="product-list">
+    
+        <!-- CARD 1 -->
+        <div class="product">
+            <img src="Easy Garlic Bread with Sliced Bread.jpg">
+            <div class="product-info">
+                <h3>Garlic Bread</h3>
+                <p>Roti yang dipanggang dengan bumbu bawang</p>
+                <span>Rp15.000</span>
+                <button onclick="addToCart('Garlic Bread')">+</button>
+            </div>
+        </div>
+    
+        <!-- CARD 2 -->
+        <div class="product">
+            <img src="Bread and Cinnamon Roll Recipes - Chelsweets.jpg">
+            <div class="product-info">
+                <h3>Cinnamon Roll</h3>
+                <p>Perpaduan kayu manis dan lapisan manis</p>
+                <span>Rp13.000</span>
+                <button onclick="addToCart('Cinnamon Roll')">+</button>
+            </div>
+        </div>
+    
+        <!-- CARD 3 -->
+        <div class="product">
+            <img src="donuts ♡.jpg">
+            <div class="product-info">
+                <h3>Donut</h3>
+                <p>Donat lembut dengan berbagai topping</p>
+                <span>Rp10.000</span>
+                <button onclick="addToCart('Donut')">+</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Products -->
+<section class="products">
+
+    <div class="product-title">
+        <h2>Our Product:</h2>
+
+        <div class="filter-btn">
+            <button onclick="filterProduct('all')">All</button>
+            <button onclick="filterProduct('savory')">Savory</button>
+            <button onclick="filterProduct('sweet')">Sweet</button>
+            <button onclick="filterProduct('plain')">Plain</button>
+        </div>
+    </div>
+
+    <div class="product-list">
+
+        <div class="product savory">
+            <img src="Easy Garlic Bread with Sliced Bread.jpg">
+
+            <div class="product-info">
+                <h3>Garlic Bread</h3>
+                <span>Rp15.000</span>
+
+                <button onclick="addToCart('Garlic Bread')">+</button>
+            </div>
+        </div>
+
+        <div class="product savory">
+            <img src="focaccia.jpg">
+
+            <div class="product-info">
+                <h3>Focaccia</h3>
+                <span>Rp13.000</span>
+
+                <button onclick="addToCart('Focaccia')">+</button>
+            </div>
+        </div>
+
+        <div class="product savory">
+            <img src="sausage bread.jpg">
+
+            <div class="product-info">
+                <h3>Sausage Bread</h3>
+                <span>Rp12.000</span>
+
+                <button onclick="addToCart('Sausage Bread')">+</button>
+            </div>
+        </div>
+
+        <div class="product savory">
+            <img src="mini pizza.jpg">
+
+            <div class="product-info">
+                <h3>Mini Pizza</h3>
+                <span>Rp10.000</span>
+
+                <button onclick="addToCart('Mini Pizza')">+</button>
+            </div>
+        </div>
+        
+        <div class="product savory">
+            <img src="savory cheese.jpg">
+
+            <div class="product-info">
+                <h3>Savory Cheese</h3>
+                <span>Rp11.000</span>
+
+                <button onclick="addToCart('Savory Cheese')">+</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-logo">
+        <h2>My.Bakery</h2>
+    </div>
+
+    <div class="footer-menu">
+        <h4>Navigation</h4>
+        <p>Home</p>
+        <p>Product</p>
+        <p>About Us</p>
+    </div>
+
+    <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>📞 +628xxxx</p>
+        <p>📧 MyBakery@gmail.com</p>
+    </div>
+
+    <div class="footer-hour">
+        <h4>Opening Hour</h4>
+        <p>Monday - Friday</p>
+        <p>08.00 - 22.00</p>
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
