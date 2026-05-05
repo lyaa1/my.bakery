@@ -214,7 +214,10 @@ body {
 
 /* OUR PRODUCT jadi 4 */
 .products .product-list {
-    grid-template-columns: repeat(5, 1fr);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
 
