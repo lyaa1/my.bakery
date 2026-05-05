@@ -17,9 +17,9 @@
 
     <!-- TENGAH -->
     <div class="nav-center">
-        <span class="active">Home</span>
-        <span>Product</span>
-        <span>About Us</span>
+        <span onclick="goTo('index.html')">Home</span>
+        <span onclick="goTo('product.html')">Product</span>
+        <span onclick="goTo('about.html')">About Us</span>
     </div>
 
     <!-- KANAN -->
@@ -70,8 +70,8 @@
     <div class="category-card">
         <img src="White Bread.jpg">
         <div>
-            <h3>Plain</h3>
-            <p>Rasa yang siap setiap gigitan</p>
+            <h3>Classic</h3>
+            <p>Rasa yang sama setiap gigitan</p>
         </div>
     </div>
 
@@ -125,10 +125,9 @@
         <h2>Our Product:</h2>
 
         <div class="filter-btn">
-            <button onclick="filterProduct('all')">All</button>
             <button onclick="filterProduct('savory')">Savory</button>
             <button onclick="filterProduct('sweet')">Sweet</button>
-            <button onclick="filterProduct('plain')">Plain</button>
+            <button onclick="filterProduct('classic')">Classic</button>
         </div>
     </div>
 
@@ -221,7 +220,7 @@
 
 </footer>
 
-<script src="script.js"></script>
+<script src="main.js"></script>
 
 </body>
 </html>

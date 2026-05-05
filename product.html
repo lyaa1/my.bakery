@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Product - My.Bakery</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+<header class="navbar">
+
+    <!-- KIRI -->
+    <div class="nav-left">
+        <h1 class="logo">My.Bakery</h1>
+    </div>
+
+    <!-- TENGAH -->
+    <div class="nav-center">
+        <span onclick="goTo('index.html')">Home</span>
+        <span onclick="goTo('product.html')">Product</span>
+        <span onclick="goTo('about.html')">About Us</span>
+    </div>
+
+    <!-- KANAN -->
+    <div class="nav-right">
+        <div class="search-box">
+            <input type="text" placeholder="Hinted search text">
+        </div>
+
+        <div class="cart" onclick="toggleCart()">🛒</div>
+    </div>
+
+</header>
+
+<div class="cart-popup" id="cartPopup">
+    <h3>🛒 Cart</h3>
+    <ul id="cart-list"></ul>
+</div>
+
+
+<!-- PRODUCT -->
+<section class="product-page">
+
+    <div class="product-title">
+        <h2>Our Product:</h2>
+
+        <div class="filter-btn">
+            <button onclick="filterProduct('savory')">Savory</button>
+            <button onclick="filterProduct('sweet')">Sweet</button>
+            <button onclick="filterProduct('classic')">Classic</button>
+        </div>
+    </div>
+
+    <div class="product-list">
+
+        <!-- SAVORY -->
+        <div class="product savory">
+            <img src="Easy Garlic Bread with Sliced Bread.jpg">
+            <div class="product-info">
+                <h3>Garlic Bread</h3>
+                <p>Roti yang dipanggang dengan bumbu bawang</p>
+                <span>Rp15.000</span>
+                <button onclick="addToCart('Garlic Bread')">+</button>
+            </div>
+        </div>
+
+        <div class="product savory">
+            <img src="focaccia.jpg">
+            <div class="product-info">
+                <h3>Focaccia</h3>
+                <p>Roti khas Italia dengan taburan rempah dan minyak zaitun</p>
+                <span>Rp13.000</span>
+                <button onclick="addToCart('Focaccia')">+</button>
+            </div>
+        </div>
+
+        <div class="product savory">
+            <img src="savory cheese.jpg">
+            <div class="product-info">
+                <h3>Savory Cheese</h3>
+                <p>Roti lembut dengan lelehan keju gurih yang kaya rasa</p>
+                <span>Rp14.000</span>
+                <button onclick="addToCart('Donut')">+</button>
+            </div>
+        </div>
+
+        <div class="product savory">
+            <img src="mini pizza.jpg">
+            <div class="product-info">
+                <h3>Mini Pizza</h3>
+                <p>Roti mini dengan topping saus, keju dan isian ala pizza </p>
+                <span>Rp10.000</span>
+                <button onclick="addToCart('Cinnamon Roll')">+</button>
+            </div>
+        </div>
+
+        <div class="product savory">
+            <img src="sausage bread.jpg">
+            <div class="product-info">
+                <h3>Sausage Bread </h3>
+                <p>Roti empuk dengan isian sosis gurih yang mengenyangkan</p>
+                <span>Rp12.000</span>
+                <button onclick="addToCart('Baguette')">+</button>
+            </div>
+        </div>
+
+        <div class="product savory">
+            <img src="smoked beef.jpg">
+            <div class="product-info">
+                <h3>Smoked beef</h3>
+                <p>Rot dengan isian smoked beef bercita rasa gurih dan khas</p>
+                <span>Rp13.000</span>
+                <button onclick="addToCart('Croissant')">+</button>
+            </div>
+        </div>
+
+        <div class="product savory">
+            <img src="roti abon.jpg">
+            <div class="product-info">
+                <h3>Roti abon</h3>
+                <p>Roti lembut dengan taburan abon manis gurihyang klasik dan lezat</p>
+                <span>Rp11.000</span>
+                <button onclick="addToCart('Baguette')">+</button>
+            </div>
+        </div>
+
+        <div class="product savory">
+            <img src="tuna mayo.jpg">
+            <div class="product-info">
+                <h3>Tuna mayo</h3>
+                <p>Roti dengan topping tuna dan mayones yang gurih dan segar</p>
+                <span>Rp11.000</span>
+                <button onclick="addToCart('Baguette')">+</button>
+            </div>
+        </div>
+
+        <div class="product savory">
+            <img src="cream cheese.jpg">
+            <div class="product-info">
+                <h3>Cream Cheese Garlic</h3>
+                <p>Roti lembut dengan krim keju yang manis dan creamy </p>
+                <span>Rp13.000</span>
+                <button onclick="addToCart('Baguette')">+</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-logo">
+        <h2>My.Bakery</h2>
+    </div>
+
+    <div class="footer-menu">
+        <h4>Navigation</h4>
+        <p>Home</p>
+        <p>Product</p>
+        <p>About Us</p>
+    </div>
+
+    <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>📞 +628xxxx</p>
+        <p>📧 mybakery@gmail.com</p>
+    </div>
+
+    <div class="footer-hour">
+        <h4>Opening</h4>
+        <p>Mon - Fri</p>
+        <p>08.00 - 22.00</p>
+    </div>
+
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
